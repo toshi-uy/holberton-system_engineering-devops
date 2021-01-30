@@ -1,2 +1,2 @@
 #!/bin/bash
-find -mindepth 2 ./ -name ".*" -type d | wc -ly
+find -mindepth 1 ./ -name ".*" -type d or -type d | wc -l
