@@ -1,2 +1,0 @@
-!#!/bin/bash
-cat /etc/passwd | fmt | cat /etc/hosts | fmt
