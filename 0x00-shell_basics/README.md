@@ -1,6 +1,6 @@
  # 0x00-SHELL BASICS**
 <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/205/image.jpg" width=100%>
-**man or help**:
+**man or help** :
 
 -   `cd`-   `ls`-   `pwd`-   `less`-   `file`-   `ln`-   `cp`-   `mv`-   `rm`-   `mkdir`-   `type`-   `which`-   `help`-   `man`
 ## Learning Objectives
