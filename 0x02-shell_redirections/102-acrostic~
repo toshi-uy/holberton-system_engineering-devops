@@ -1,4 +1,0 @@
-#!/bin/bash
-tr -s ' '  '\n' | cut -c 1
-
-
