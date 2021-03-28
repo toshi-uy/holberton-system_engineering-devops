@@ -1,4 +1,4 @@
-<img src="https://imgur.com/uZSsvUR" width=100%>
+<img src="https://i.imgur.com/uZSsvUR.png" width=100%>
 # Foundations
 ## System engineering & DevOps ― Bash
 We learned about the shell, how to use it, how to move around and how to look and manipulate files.
