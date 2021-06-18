@@ -4,16 +4,16 @@
 x=0
 while [ $x -le 9 ]
 do
-  echo "Holberton School"
   if [ $x -eq 3 ]
   then
     echo "bad luck"
+    echo "Holberton School"
   elif [ $x -eq 7 ]
   then
     echo "bad luck"
+    echo "Holberton School"
   else
-    x=$(( x + 1 ))
-    continue
+    echo "Holberton School"
   fi
   x=$(( x + 1 ))
 done
