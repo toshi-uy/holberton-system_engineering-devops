@@ -5,9 +5,10 @@
 
 min=0
 hours = 0
+echo "Hour: 0"
 while [ $min -le 61 ]
 do
-  if [ $min -eq 0 ]
+  if [ $min -eq 0 ] && [hours -le 0]
   then
     echo "Hour: $hours"
     hours=$(( hours + 1 ))
