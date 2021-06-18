@@ -2,7 +2,7 @@
 text='Holberton School'
 i='10'
 
-for text in {0..10}
+for {0..9} in text
 do
     echo $text
 done
