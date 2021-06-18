@@ -17,4 +17,5 @@ do
     min=0
   else
     echo $min
+  fi
 done
