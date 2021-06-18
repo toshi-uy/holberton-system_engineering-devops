@@ -10,6 +10,7 @@ then
       echo "holbertonschool file is not empty"
     else
       if [ -d ./$file ];
+      then
         fi
       else
         echo "holbertonschool file is empty"
