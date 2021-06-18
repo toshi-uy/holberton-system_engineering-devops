@@ -4,12 +4,10 @@
 x=0
 while [ $x -le 9 ]
 do
+  echo "Holberton School"
   if [ $x -eq 8 ]
   then
     echo "Hi"
-    x=$(( x + 1 ))
-    continue
   fi
-  echo "Holberton School"
   x=$(( x + 1 ))
 done
