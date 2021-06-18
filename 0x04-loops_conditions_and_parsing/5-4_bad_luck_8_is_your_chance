@@ -7,11 +7,9 @@ do
   if [ $x -eq 3 ]
   then
     echo "bad luck"
-    echo "Holberton School"
   elif [ $x -eq 7 ]
   then
     echo "bad luck"
-    echo "Holberton School"
   else
     echo "Holberton School"
   fi
