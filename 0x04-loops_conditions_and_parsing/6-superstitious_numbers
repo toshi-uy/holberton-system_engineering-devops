@@ -13,7 +13,7 @@ do
     echo $x
     echo bad luck from China
     ;;
-  12)
+  9)
     echo $x
     echo bad luck from Japan
     ;;
