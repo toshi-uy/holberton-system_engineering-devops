@@ -19,7 +19,7 @@ do
   fi
   if [ $hours -eq 12 && $min -eq 59 ]
   then
-    done
+    break
   fi
   min=$(( min + 1 ))
 done
