@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Bash script that displays Holberton School 10 times using until.
+
+x=0
+until [ $x -le 9 ]
+do
+  echo "Holberton School"
+  x=$(( x + 1 ))
+done
