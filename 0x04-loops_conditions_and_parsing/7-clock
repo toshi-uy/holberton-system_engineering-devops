@@ -14,6 +14,7 @@ do
     then
       hours=$(( hours + 1 ))
       min=$(( min + 1 ))
+      continue
     else
       echo "Hour: $hours"
       hours=$(( hours + 1 ))
