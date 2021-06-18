@@ -19,7 +19,7 @@ do
     echo $min
     min=$(( min + 1 ))
   fi
-  if [ $hours -eq 12 ] && [ $min -eq 59 ]
+  if [ $hours -eq 13 ] && [ $min -eq 60 ]
   then
     break
   fi
