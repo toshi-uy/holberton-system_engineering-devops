@@ -1,8 +1,6 @@
 #!/bin/bash
-text='Holberton School'
-i='10'
 
-for {0..9} in text
+for {0..9}
 do
-    echo $text
+    echo "Holberton School"
 done
