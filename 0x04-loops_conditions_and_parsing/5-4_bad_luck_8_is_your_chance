@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#Bash script that displays Holberton School 10 times using while.
+#Bash script that displays Holberton School 10 times using while,
+#in 4 loop print bad luck and in 8 loop print good luck.
 
 x=0
 while [ $x -le 9 ]

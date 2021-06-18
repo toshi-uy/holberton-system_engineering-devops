@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Bash script that displays Holberton School 10 times using while.
+#Bash script that displays Holberton School 10 times using while, in 9 loop print Hi
 
 x=0
 while [ $x -le 9 ]
