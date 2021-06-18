@@ -5,17 +5,21 @@
 
 min=0
 hours = 0
-while [ $min -le 60 ]
+while [ $min -le 61 ]
 do
   if [ $min -eq 0 ]
   then
     echo "Hour: $hours"
     hours=$(( hours + 1 ))
-  elif [ $min -eq 59 ]
+  elif [ $min -eq 60 ]
   then
     min=0
   else
     echo $min
+  fi
+  if [hours -eq 12] && [min -eq 59]
+  then
+    break
   fi
   min=$(( min + 1 ))
 done
