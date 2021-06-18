@@ -1,5 +1,5 @@
 #!/bin/bash
-var='i'
+unused_variable='i'
 
 for i in {0..9}
 do
