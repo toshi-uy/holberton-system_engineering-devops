@@ -1,7 +1,6 @@
 #!/bin/bash
-unused_variable='i'
 
-for i in {0..9}
+for _ in {0..9}
 do
     echo "Holberton School"
 done
