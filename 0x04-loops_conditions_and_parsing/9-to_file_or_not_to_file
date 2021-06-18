@@ -2,16 +2,16 @@
 #Bash script that gives you information about the holbertonschool file.
 
 file='holbertonschool'
-if [ -a ./$file];
+if [ -a '$file'];
 then
     echo "holbertonschool file exists"
-    if [ -r ./$file ];
+    if [ -r '$file' ];
     then
       echo "holbertonschool file is not empty"
     else
-      if [ -d ./$file ];
+      if [ -d '$file' ];
       then
-        fi
+        echo nada
       else
         echo "holbertonschool file is empty"
     fi
