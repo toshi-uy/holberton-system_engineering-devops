@@ -4,6 +4,6 @@
 counter=0
 until [ $counter -gt 9 ]
 do
-  echo Counter: $counter
+  echo "Holberton School"
   ((counter++))
 done
