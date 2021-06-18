@@ -12,7 +12,6 @@ do
   then
     echo "bad luck"
   else
-  then
   fi
   x=$(( x + 1 ))
 done
