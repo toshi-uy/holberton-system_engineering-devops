@@ -17,9 +17,9 @@ do
   else
     echo $min
   fi
-  if [$hours -eq 12] && [$min -eq 59]
+  if [ $hours -eq 12 && $min -eq 59 ]
   then
-    break
+    done
   fi
   min=$(( min + 1 ))
 done
