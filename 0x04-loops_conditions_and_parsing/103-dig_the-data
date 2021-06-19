@@ -2,4 +2,4 @@
 #Bash script that groups visitors by IP and HTTP status code, and displays this data
 
 filename="apache-access.log"
-awk '{ print $1, $9 }' $filename | sort | uniq -c | sort -nr | tr -s "     "
+awk '{ print $1, $9 }' $filename | sort | uniq -c | sort -nr
