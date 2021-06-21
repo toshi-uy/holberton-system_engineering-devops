@@ -2,4 +2,5 @@
 # Bash script that stops 4-to_infinity_and_beyond process.
 
 PS=`pgrep -u root 4-to_infinity_and_beyond`
-kill "$PS"
+echo $PS
+kill $PS
