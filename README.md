@@ -11,7 +11,10 @@ We finished this chapter with the importance and usage of redirections and filte
 - 209 0x03. Shell, init files, variables and expansions [Feb 1 21...Feb 2 21]
 - 208 0x02. Shell, I/O Redirections and filters [Jan 29 21...Feb 2 21]
 
+In a second part of the program we are learning loops, conditions and parsing in Bash. Also processes and Signals.
+
+- 251 0x04. Loops, conditions and parsing [Jun 18 21...Jun 19 21]
+- 255 0x05. Processes and signals [Jun 21 21...Jan 22 21]
+
 ## Author
 Toshi Borgia.
-
-
