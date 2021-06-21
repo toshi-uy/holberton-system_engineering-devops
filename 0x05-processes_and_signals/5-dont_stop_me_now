@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Bash script that stops 4-to_infinity_and_beyond process.
 
-PS=`grep -f ./4-to_infinity_and_beyond`
+PS=$(grep -f ./4-to_infinity_and_beyond)
 kill $PS
