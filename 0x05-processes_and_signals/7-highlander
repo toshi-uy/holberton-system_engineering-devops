@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Bash script that displays To infinity and beyond indefinitely
+
+x=1
+_handler() {
+   signal=$1
+   echo "I am invincible!!!"
+}
+while [ $x -eq 1 ]
+do
+trap '_handler SIGTERM' SIGTERM
+echo "To infinity and beyond"
+sleep 2
+done
