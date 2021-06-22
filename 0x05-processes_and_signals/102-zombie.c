@@ -1,5 +1,7 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
 
 /**
  * infinite_while - infinite loop
@@ -17,7 +19,6 @@ int infinite_while(void)
 
 /**
  * main - Main function.
- *
  * Return: 0 on success.
  */
 
