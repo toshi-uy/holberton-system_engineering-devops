@@ -17,7 +17,7 @@ int infinite_while(void)
 
 /**
  * main - Main function.
- * 
+ *
  * Return: 0 on success.
  */
 
