@@ -56,4 +56,5 @@ int main(void)
 		exit(1);
 
 	infinite_while();
+	return (0);
 }
