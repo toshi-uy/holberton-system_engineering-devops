@@ -1,6 +1,8 @@
 # 0x09. Web infrastructure design
 ###  Foundations > System engineering & DevOps > Web stack
 
+<img width=100% src="https://freerangestock.com/sample/86422/building-the-web-infrastructure--servers-and-networks--with-co.jpg">
+
 
 ## Learning Objectives
 
