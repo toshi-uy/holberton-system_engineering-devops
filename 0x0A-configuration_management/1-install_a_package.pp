@@ -1,5 +1,7 @@
-#Using Puppet, create a file in /tmp
+#Using Puppet, install puppet-lint
 package { 'puppet-lint':
-          ensure  => ['2.1.1',
-                    'created'],
+          require => '-y ruby',
+          ensure  => ['gem install',
+                      '2.1.1',
+                      'created'],
       }
