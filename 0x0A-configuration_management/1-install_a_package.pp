@@ -2,5 +2,5 @@
 package { 'puppet-lint':
           ensure  => ['2.1.1',
                     'created']
-          require => Package['openssl']
+          require => Package['puppet-lint']
       }
