@@ -7,4 +7,5 @@ file_line {
 file_line {
     path  => '/etc/ssh/ssh_config',
     line  => 'IdentityFile ~/ssh/holberton',
+    match => 'IdentityFile ~/ssh/id_rsa',
 }
