@@ -5,7 +5,7 @@ file_line { 'change key':
     line   => 'PasswordAuthentication no',
     match  => 'PasswordAuthentication yes',
 }
-file_line { 'change key':
+file_line { 'no password':
     ensure => present,
     path   => '/etc/ssh/ssh_config',
     line   => 'IdentityFile ~/ssh/holberton',
