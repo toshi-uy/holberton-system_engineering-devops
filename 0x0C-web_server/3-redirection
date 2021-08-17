@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Configure your Nginx server so that /redirect_me is redirecting to another page
 
+apt-get update;
+apt-get install nginx -y;
 service nginx start
 printf %s "server {
      listen      80 default_server;
