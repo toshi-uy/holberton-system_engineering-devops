@@ -20,9 +20,5 @@ printf %s "server {
            try_files $uri $uri/ =404;
      }
      error_page 404 /404.html;
-     location /404 {
-     root /etc/nginx/html;
-     internal;
-     }
 }" > /etc/nginx/sites-available/default;
 service nginx restart;
