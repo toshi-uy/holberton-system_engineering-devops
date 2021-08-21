@@ -1,13 +1,11 @@
 # changes to our configuration file
-file_line { 'change key':
-    ensure => present,
-    path   => '/etc/ssh/ssh_config',
-    line   => 'PasswordAuthentication no',
-    match  => 'PasswordAuthentication yes',
-}
-file_line { 'no password':
+file_line { 'no_password':
     ensure => present,
     path   => '/etc/ssh/ssh_config',
     line   => 'IdentityFile ~/ssh/holberton',
-    match  => 'IdentityFile ~/ssh/id_rsa',
+}
+file_line { 'change_key':
+    ensure => present,
+    path   => '/etc/ssh/ssh_config',
+    line   => 'PasswordAuthentication no',
 }
