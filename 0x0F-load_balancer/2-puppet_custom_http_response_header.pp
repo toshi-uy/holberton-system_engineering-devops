@@ -5,12 +5,6 @@ package { 'nginx':
     name   => 'nginx',
 }
 
-file { 'index.html':
-    ensure  => present,
-    path    => '/var/www/html/index.html',
-    content => 'Holberton School\n',
-}
-
 file_line { 'header':
     ensure  => present,
     path    => '/etc/nginx/sites-available/default',
