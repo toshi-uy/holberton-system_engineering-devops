@@ -1,7 +1,7 @@
 # automate the task of creating a custom HTTP header response, but with Puppet
 
 package { 'nginx':
-    ensure => installed,
+    ensure => present,
     name   => 'nginx',
 }
 
