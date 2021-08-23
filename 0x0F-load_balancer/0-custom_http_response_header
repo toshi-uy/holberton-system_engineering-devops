@@ -3,12 +3,24 @@
 # The name of the custom HTTP header must be X-Served-By
 # The value of the custom HTTP header must be the hostname of the server Nginx is running on
 
+apt-get update;
+apt-get install nginx -y;
 service nginx start;
+mkdir /var/www/html;
+touch /var/www/html/404.html;
+echo "Ceci n'est pas une page" > /var/www/html/404.html;
+
 printf %s "server {
      listen      80 default_server;
      listen      [::]:80 default_server;
      root        /var/www/html;
      add_header X-Served-By $HOSTNAME;
      index       index.html index.htm;
+     location /redirect_me {
+           return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4/;
+     }
+     location / {
+           error_page 404 /404.html;
+     }
 }" > /etc/nginx/sites-available/default;
 service nginx restart;
