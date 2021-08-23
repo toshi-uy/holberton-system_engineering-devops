@@ -3,5 +3,13 @@
 # The name of the custom HTTP header must be X-Served-By
 # The value of the custom HTTP header must be the hostname of the server Nginx is running on
 
-add_header X-Served-By SAMEORIGIN;
+service nginx start;
+printf %s "server {
+     listen      80 default_server;
+     listen      [::]:80 default_server;
+     root        /var/www/html;
+     index       index.html index.htm;
+     add_header X-Served-By hostname;
+     }
+}" > /etc/nginx/sites-available/default;
 service nginx restart;
