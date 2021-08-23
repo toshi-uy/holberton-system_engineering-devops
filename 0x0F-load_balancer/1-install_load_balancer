@@ -4,7 +4,7 @@
 # Distribute requests using a roundrobin algorithm, Make sure that HAproxy can be managed via an init script
 # Make sure that your servers are configured with the right hostnames: [STUDENT_ID]-web-01 and [STUDENT_ID]-web-02.
 
-sudo add-apt-repository ppa:vbernat/haproxy-1.7;
+echo | sudo add-apt-repository ppa:vbernat/haproxy-1.7;
 apt-get update -y;
 sudo apt install -y haproxy;
 
