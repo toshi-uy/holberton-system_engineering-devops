@@ -3,6 +3,5 @@
 # The name of the custom HTTP header must be X-Served-By
 # The value of the custom HTTP header must be the hostname of the server Nginx is running on
 
-location /response {
-  add_header X-Served-By $hostname;      
-}
+add_header X-Served-By SAMEORIGIN;
+service nginx restart;
