@@ -10,8 +10,5 @@ printf %s "server {
      listen      80 default_server;
      root        /usr/share/nginx/html;
      index       index.html index.htm;
-     location / {
-           error_page 404 /404.html;                                                                                                                               ---------------------------------------------
-     }
 }" > /etc/nginx/sites-enabled/default;
 service nginx restart;
