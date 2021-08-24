@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Using what you did for task #0, make your fix short and sweet.
+apt-get install nginx -y
+printf %s "server {listen\t80 default_server\n\troot\t/usr/share/nginx/html\nindex\tindex.html index.htm\n}" > /etc/nginx/sites-enabled/default
+service nginx restart
