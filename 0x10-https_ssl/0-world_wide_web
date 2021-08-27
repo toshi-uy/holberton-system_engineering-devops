@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # script that will display information about subdomains.
-
 domain="$1"
 
 func () {
