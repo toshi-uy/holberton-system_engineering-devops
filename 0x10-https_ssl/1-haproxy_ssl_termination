@@ -1,3 +1,6 @@
+frontend https_front
+    bind *:443 ssl crt /etc/letsencrypt/live/www.toshiweb.tech/fullchain.pem
+
 frontend http_front
     bind *:443
     stats uri /haproxy?stats
