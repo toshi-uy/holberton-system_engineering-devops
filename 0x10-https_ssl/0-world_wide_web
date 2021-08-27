@@ -8,11 +8,9 @@ function () {
     echo "$1 $result" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
 }
 
-if [ $# -eq 2 ]
-then
+if [ $# -eq 2 ];then
     function "$2"
-elif [ $# -eq 1 ]
-then
+elif [ $# -eq 1 ];then
     function www
     function lb-01
     function web-01
