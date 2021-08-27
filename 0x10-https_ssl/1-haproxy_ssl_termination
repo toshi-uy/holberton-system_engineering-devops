@@ -7,3 +7,10 @@ backend http_back
     balance roundrobin
     server 2785-web-01 34.75.82.215:80 check
     server 2785-web-02 34.138.61.91:80 check
+
+frontend https
+    bind *:443 ssl crt /etc/haproxy/certs/www.toshiweb.tech.pem
+    reqadd X-Forwarded-Proto:\ https
+    acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
+    use_backend letsencrypt-backend if letsencrypt-acl
+    default_backend app_pool
