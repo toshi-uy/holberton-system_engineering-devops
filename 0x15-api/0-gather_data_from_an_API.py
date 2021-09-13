@@ -19,13 +19,12 @@ if __name__ == "__main__":
     name = users.get('name')
     number_of_tasks = len(todo_list)
     done = 0
-    done_tasks = []
+    done_tasks = ""
     for task in todo_list:
         complited = task.get('completed')
         if complited:
             done += 1
-            done_tasks.append(task.get('title'))
+            done_tasks += "\t {}\n"(task.get('title'))
     print("Employee {} is done with tasks({}/{}):".format(
         name, done, number_of_tasks))
-    for task in done_tasks:
-        print("\t" + " " + "{}".format(task))
+    print(done_tasks, end="")
