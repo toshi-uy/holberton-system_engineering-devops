@@ -22,11 +22,11 @@ if __name__ == "__main__":
                 format(user.get('id')))
         todo_list = req_list.json()
         for task in todo_list:
-            new_dict = {}
-            new_dict["username"] = user.get('username')
-            new_dict["task"] = task.get('title')
-            new_dict["completed"] = task.get('completed')
-            tasks_list.append(new_dict)
+            task_dict = {}
+            task_dict["username"] = user.get('username')
+            task_dict["task"] = task.get('title')
+            task_dict["completed"] = task.get('completed')
+            tasks_list.append(task_dict)
         all_dict[user.get('id')] = tasks_list
 
     with open('todo_all_employees.json', mode='w') as json_file:
