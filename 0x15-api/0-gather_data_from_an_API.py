@@ -9,7 +9,6 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-
     id = argv[1]
     req_users = requests.get(
         'https://jsonplaceholder.typicode.com/users/{}'.format(id))
