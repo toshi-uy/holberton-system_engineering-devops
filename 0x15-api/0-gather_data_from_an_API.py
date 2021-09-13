@@ -24,7 +24,7 @@ if __name__ == "__main__":
         complited = task.get('completed')
         if complited:
             done += 1
-            done_tasks += "\t {}\n"(task.get('title'))
+            done_tasks += "\t {}\n".format(task.get('title'))
     print("Employee {} is done with tasks({}/{}):".format(
         name, done, number_of_tasks))
     print(done_tasks, end="")
