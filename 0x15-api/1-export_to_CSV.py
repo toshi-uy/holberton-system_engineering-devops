@@ -18,10 +18,11 @@ if __name__ == "__main__":
     todo_list = req_list.json()
     users = req_users.json()
     name = users.get('name')
+    user_id = req_users.get('id')
 
     with open('{}.csv'.format(id), mode="w") as csv_file:
         csv_file = csv.writer(csv_file, quotechar='"', quoting=csv.QUOTE_ALL)
         for task in todo_list:
             completed = task.get('completed')
             title = task.get('title')
-            csv_file.writerow([id, name, completed, title])
+            csv_file.writerow([user_id, name, completed, title])
