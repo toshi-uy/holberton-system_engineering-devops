@@ -5,6 +5,9 @@ returns information about his/her TODO list progress.
 """
 
 
+from requests import check_compatibility
+
+
 if __name__ == "__main__":
     import requests
     from sys import argv
@@ -17,5 +20,13 @@ if __name__ == "__main__":
     users = req_users.json()
     name = users.get('name')
     number_of_tasks = len(todo_list)
-    print("[{}]".format(name))
-    print("{}".format(number_of_tasks))
+    done = 0
+    done_tasks = []
+    for task in number_of_tasks:
+        complited = todo_list.get('completed')
+        if complited:
+            done += 1
+            done_tasks.append(number_of_tasks.get('title'))
+    print("Employee {} is done with tasks({}/{}):".format(name, done, number_of_tasks))
+    for task in done_tasks:
+        print("\t {}".format(task))
