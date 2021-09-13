@@ -10,9 +10,10 @@ if __name__ == "__main__":
     from sys import argv
 
 
-    req_users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(argv[1]))
-    req_todo_list = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(argv[1]))
+    id = argv[1]
+    req_users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(id))
+    req_todo_list = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(id))
     todo_list = req_todo_list.json
     users = req_users.json
-    name = users.get(argv[1])
+    name = users.get('name')
     print("[{}]".format(name))
