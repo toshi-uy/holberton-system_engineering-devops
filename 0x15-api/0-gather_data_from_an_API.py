@@ -5,9 +5,6 @@ returns information about his/her TODO list progress.
 """
 
 
-from requests import check_compatibility
-
-
 if __name__ == "__main__":
     import requests
     from sys import argv
