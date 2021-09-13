@@ -17,7 +17,7 @@ if __name__ == "__main__":
         'https://jsonplaceholder.typicode.com/users/{}/todos'.format(id))
     todo_list = req_list.json()
     users = req_users.json()
-    name = users.get('name')
+    name = users.get('username')
     user_id = req_users.get('id')
 
     with open('{}.csv'.format(id), mode="w") as csv_file:
