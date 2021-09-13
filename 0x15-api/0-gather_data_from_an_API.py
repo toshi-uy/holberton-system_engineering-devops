@@ -11,8 +11,10 @@ if __name__ == "__main__":
 
 
     id = argv[1]
-    req_users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(id))
-    req_todo_list = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(id))
+    req_users = requests.get(
+        'https://jsonplaceholder.typicode.com/users/{}'.format(id))
+    req_list = requests.get(
+        'https://jsonplaceholder.typicode.com/users/{}/todos'.format(id))
     todo_list = req_todo_list.json()
     users = req_users.json()
     name = users.get('name')
@@ -24,6 +26,7 @@ if __name__ == "__main__":
         if complited:
             done += 1
             done_tasks.append(task.get('title'))
-    print("Employee {} is done with tasks({}/{}):".format(name, done, number_of_tasks))
+    print("Employee {} is done with tasks({}/{}):".format(
+        name, done, number_of_tasks))
     for task in done_tasks:
         print("\t {}".format(task))
