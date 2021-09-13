@@ -18,7 +18,7 @@ if __name__ == "__main__":
     todo_list = req_list.json()
     users = req_users.json()
     name = users.get('username')
-    user_id = req_users.get('id')
+    user_id = users.get('id')
 
     with open('{}.csv'.format(id), mode="w") as csv_file:
         csv_file = csv.writer(csv_file, quotechar='"', quoting=csv.QUOTE_ALL)
