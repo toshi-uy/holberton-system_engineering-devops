@@ -27,7 +27,7 @@ if __name__ == "__main__":
         dic['task'] = task.get('title')
         dic['completed'] = task.get('completed')
         dic['username'] = name
-        tasks(dic)
+        tasks.append(dic)
     jaison[id] = tasks
 
     with open("{}.json".format(id), "w")as f:
