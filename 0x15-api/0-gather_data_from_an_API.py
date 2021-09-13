@@ -11,5 +11,5 @@ if __name__ == "__main__":
     if type(argv[1]) is int:
         users = requests.get('https://jsonplaceholder.typicode.com/users')
         todo_list = requests.get('https://jsonplaceholder.typicode.com/todos')
-        print("\t- users:", todo_list.text)
-        print("\t- users:", users.text)
+        print("\t- users:", todo_list.json)
+        print("\t- users:", users.json)
