@@ -9,6 +9,9 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
+    id = argv[1]
+    print(id)
+    print(type(id))
 
     if type(argv[1]) is int:
         id = argv[1]
@@ -18,5 +21,4 @@ if __name__ == "__main__":
         users = req_users.json
         number_of_tasks = len(todo_list)
         name = users.get(argv[1])
-        print(id)
         print("[{}]".format(number_of_tasks))
