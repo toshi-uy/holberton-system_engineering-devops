@@ -13,7 +13,9 @@ if __name__ == "__main__":
     id = argv[1]
     req_users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(id))
     req_todo_list = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(id))
-    todo_list = req_todo_list.json
-    users = req_users.json
+    todo_list = req_todo_list.json()
+    users = req_users.json()
     name = users.get('name')
+    number_of_tasks = len(todo_list)
     print("[{}]".format(name))
+    print("{}".format(number_of_tasks))
