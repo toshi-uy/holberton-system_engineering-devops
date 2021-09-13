@@ -11,9 +11,12 @@ if __name__ == "__main__":
 
 
     if type(argv[1]) is int:
+        id = argv[1]
         req_users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(argv[1]))
         req_todo_list = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(argv[1]))
         todo_list = req_todo_list.json
         users = req_users.json
         number_of_tasks = len(todo_list)
+        name = users.get(argv[1])
+        print(id)
         print("[{}]".format(number_of_tasks))
