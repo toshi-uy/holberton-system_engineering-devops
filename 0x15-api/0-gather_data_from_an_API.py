@@ -20,10 +20,10 @@ if __name__ == "__main__":
     done = 0
     done_tasks = []
     for task in todo_list:
-        complited = todo_list.get('completed')
+        complited = task.get('completed')
         if complited:
             done += 1
-            done_tasks.append(todo_list.get('title'))
-    print("Employee {} is done with tasks({}/{}):".format(name, done, todo_list))
+            done_tasks.append(task.get('title'))
+    print("Employee {} is done with tasks({}/{}):".format(name, done, number_of_tasks))
     for task in done_tasks:
         print("\t {}".format(task))
