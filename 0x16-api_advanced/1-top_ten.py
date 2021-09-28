@@ -16,7 +16,7 @@ def top_ten(subreddit):
                              subreddit + '/hot.json?limit=10',
                              headers=headers, allow_redirects=False)
     if req_hot.status_code == 200:
-        hot = req_hot.get('data').get('children')
+        hot = req_hot.json().get('data').get('children')
         for title in hot:
             print(title.get('data').get('title'))
     print(None)
