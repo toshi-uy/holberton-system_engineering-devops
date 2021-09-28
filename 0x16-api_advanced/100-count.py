@@ -24,13 +24,14 @@ def count_words(subreddit, word_list, pagination="", results={}):
         hot = response.get('data').get('children')
         for data in hot:
             title = data.get('data').get('title')
-            print(title.split(' ').encode())
             for i in word_list:
-                if i in title.split(' '):
-                    if results[i]:
-                        results[i] += 1
-                    else:
-                        results[i] = 1
+                for j in title.split():
+                    print(j)
+                    if i in title.split(' '):
+                        if results[i]:
+                            results[i] += 1
+                        else:
+                            results[i] = 1
         pagination = response.get('data').get('after')
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results)
