@@ -13,8 +13,8 @@ def top_ten(subreddit):
     """
     headers = {"User-Agent": "Mozilla/5.0"}
     req_hot = requests.get('https://www.reddit.com/r/' +
-                             subreddit + '/hot.json?limit=10',
-                             headers=headers, allow_redirects=False)
+                            subreddit + '/hot.json?limit=10',
+                            headers=headers, allow_redirects=False)
     if req_hot.status_code == 200:
         hot = req_hot.json().get('data').get('children')
         for data in hot:
