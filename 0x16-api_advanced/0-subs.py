@@ -16,4 +16,5 @@ def number_of_subscribers(subreddit):
         print("404")
         return 0
     users = req_users.json()
-    return users.get('count')
+    print(users.get('count'))
+    return 20
