@@ -36,5 +36,7 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
         else:
             result = []
             for key, value in results.items():
-                result.append("{}: {}\n".format(key, value))
-            print(result)
+                result.append("{}: {}".format(key, value))
+            result = result.sort()
+            for i in result:
+                print(i)
