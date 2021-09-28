@@ -20,5 +20,5 @@ def top_ten(subreddit):
         for data in hot:
             print(data)
             title = data.get('data').get('title')
-            print(title)
+            print(title.enconding)
     print(None)
