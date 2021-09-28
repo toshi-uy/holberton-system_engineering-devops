@@ -31,5 +31,5 @@ def count_words(subreddit, word_list, pagination="", results={}):
         pagination = response.get('data').get('after')
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results)
-    if results:
-        return results
+        else:
+            print results
