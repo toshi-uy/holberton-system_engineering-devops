@@ -10,7 +10,8 @@ def number_of_subscribers(subreddit):
     """
     returns the number of subribers of a subreddit or 0 if fails
     """
-    req_users = requests.get('https://www.reddit.com/r/' + subreddit + '/mine/subscriber')
+    header = {'User-Agent': 'android:com.example.myredditapp:v1.2.3 (by /u/kemitche)'}
+    req_users = requests.get('https://www.reddit.com/r/' + subreddit + '/mine/subscribers.json', allow_redirects=False)
     if req_users.status_code == 404:
         return 0
     users = req_users.json()
