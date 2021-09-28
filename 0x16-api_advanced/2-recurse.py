@@ -17,11 +17,12 @@ def recurse(subreddit, hot_list=[], pagination=""):
     req_hot = requests.get(url, headers=headers, allow_redirects=False)
     if req_hot.status_code != 200:
         return None
-    response = req_hot.json()
-    hot = response.get('data').get('children')
-    for data in hot:
-        hot_list.append(data.get('data').get('title'))
+    else:
+        response = req_hot.json()
+        hot = response.get('data').get('children')
+        for data in hot:
+            hot_list.append(data.get('data').get('title'))
         pagination = response.get('data').get('after')
         if pagination is not None:
             recurse(subreddit, hot_list, pagination)
-    return hot_list
+        return hot_list
