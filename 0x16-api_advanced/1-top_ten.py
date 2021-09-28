@@ -18,5 +18,5 @@ def top_ten(subreddit):
     if req_hot.status_code == 200:
         hot = req_hot.json().get('data').get('children')
         for title in hot:
-            print (title.get('data').get('title'))
-    print("None")
+            print(title.get('data').get('title'))
+    print(None)
