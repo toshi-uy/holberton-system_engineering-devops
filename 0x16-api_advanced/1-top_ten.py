@@ -3,21 +3,23 @@
 queries the Reddit API and prints the titles of the first
 10 hot posts listed for a given subreddit.
 """
-import requests as r
+import requests
 
 
 def top_ten(subreddit):
-    '''prints the titles of the first 10 hot
-    posts listed for a given subreddit.'''
-    payload = {'limit': 10}
-    headers = {"User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"}
-    x = r.get('https://www.reddit.com/r/{}/hot.json'
-              .format(subreddit), headers=headers, params=payload,
-              allow_redirects=False)
-    if x.status_code == 404:
-        print("None")
+    """
+    prints the titles of the first 10 hot posts listed for a given
+    subreddit or None if fails
+    """
+    headers = {"User-Agent": "Mozilla/5.0"}
+    req_hot = requests.get('https://www.reddit.com/r/' +
+                           subreddit + '/hot.json?limit=10',
+                           headers=headers, allow_redirects=False)
+    if req_hot.status_code == 200:
+        hot = req_hot.json().get('data').get('children')
+        for data in hot:
+            title = data.get('data').get('title').encode()
+            print(str(title)[2:-1])
+    else:
+        print(None)
         return
-    response = x.json().get('data').get('children')
-    for data in response:
-        title = data.get('data').get('title')
-        print(title)
