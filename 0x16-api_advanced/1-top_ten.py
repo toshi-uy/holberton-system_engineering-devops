@@ -20,6 +20,7 @@ def top_ten(subreddit):
         for data in hot:
             title = data.get('data').get('title').encode()
             print(str(title)[2:-1])
+            return
     else:
         print(None)
         return
