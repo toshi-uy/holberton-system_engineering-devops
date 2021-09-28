@@ -19,5 +19,6 @@ def top_ten(subreddit):
         hot = req_hot.json().get('data').get('children')
         for data in hot:
             title = data.get('data').get('title')
+            title.encode('ascii', 'ignore')
             print(title)
     print(None)
