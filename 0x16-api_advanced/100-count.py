@@ -32,4 +32,4 @@ def count_words(subreddit, word_list, pagination="", results={}):
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results)
         else:
-            print results
+            print(results)
