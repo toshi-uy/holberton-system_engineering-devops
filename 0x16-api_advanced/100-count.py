@@ -24,6 +24,7 @@ def count_words(subreddit, word_list, pagination="", results={}):
         hot = response.get('data').get('children')
         for data in hot:
             title = data.get('data').get('title')
+            print(title.split(' '))
             for i in word_list:
                 if i in title.split(' '):
                     if results[i]:
