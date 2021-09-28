@@ -16,5 +16,5 @@ def number_of_subscribers(subreddit):
         print("error")
         return 0
     users = req_users.json()
-    print(users)
+    print(req_users)
     return 20
