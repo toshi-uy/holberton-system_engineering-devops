@@ -29,10 +29,10 @@ def count_words(subreddit, word_list, pagination="", results={}):
                     print(j.encode())
                     if i.lower() in j.lower():
                         if not results[i]:
-                            results[i] = 'caca'
+                            results[i] = 1
                         else:
-                            results[i] = 'popo'
+                            results[i] += 1
         pagination = response.get('data').get('after')
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results)
-        print(results)
+    print(results)
