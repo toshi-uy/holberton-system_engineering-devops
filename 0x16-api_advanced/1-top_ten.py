@@ -20,5 +20,5 @@ def top_ten(subreddit):
         return
     hot = req_hot.json().get('data').get('children')
     for data in hot:
-        title = data.get('data').get('title').encode()
-        print(str(title)[2:-1])
+        title = data.get('data').get('title')
+        print(title)
