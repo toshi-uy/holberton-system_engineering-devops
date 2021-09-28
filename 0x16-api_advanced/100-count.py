@@ -8,7 +8,7 @@ should not).
 import requests
 
 
-def count_words(subreddit, word_list, pagination="", results=""):
+def count_words(subreddit, word_list, pagination="", results={}):
     """
     queries the Reddit API parses the title of all hot
     articles, and prints a sorted count of given keywords
@@ -28,10 +28,7 @@ def count_words(subreddit, word_list, pagination="", results=""):
                 for j in title.split():
                     print(j.encode())
                     if i.lower() in j.lower():
-                        if not results['react']:
-                            results['react'] = 1
-                        else:
-                            results['react'] += 1
+                        results[i] = 1
         pagination = response.get('data').get('after')
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results)
