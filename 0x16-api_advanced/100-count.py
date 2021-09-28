@@ -8,7 +8,7 @@ should not).
 import requests
 
 
-def count_words(subreddit, word_list, pagination="", results={''}):
+def count_words(subreddit, word_list, pagination="", results=""):
     """
     queries the Reddit API parses the title of all hot
     articles, and prints a sorted count of given keywords
