@@ -12,9 +12,9 @@ def recurse(subreddit, hot_list=[], pagination=""):
     of all hot articles for a given subreddit or None
     """
     headers = {"User-Agent": "Mozilla/5.0"}
-    url = 'https://www.reddit.com/r/' + subreddit + '/hot.json?limit=10'
-    req_hot = requests.get(url, headers=headers, after=pagination,
-                           allow_redirects=False)
+    url = 'https://www.reddit.com/r/' + subreddit +\
+          '/hot.json??after={}'.format(pagination)
+    req_hot = requests.get(url, headers=headers, allow_redirects=False)
     if req_hot.status_code != 200:
         return None
     response = req_hot.json()
