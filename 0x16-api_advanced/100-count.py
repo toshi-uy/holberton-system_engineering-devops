@@ -35,10 +35,10 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
                 if word in title.split():
                     times = len([t for t in title.split()
                                  if t == word.lower()])
-                    if results.get(word) is None:
-                        results[word] = times
+                    if results.get(word.lower()) is None:
+                        results[word.lower()] = times
                     else:
-                        results[word] += times
+                        results[word.lower()] += times
         pagination = response.get('data').get('after')
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results, count)
