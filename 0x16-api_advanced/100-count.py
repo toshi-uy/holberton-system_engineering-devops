@@ -33,7 +33,8 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
             title = data.get('data').get('title')
             for word in word_list:
                 if word in title.split():
-                    times = len([t for t in title.split() if t == word.lower()])
+                    times = len([t for t in title.split()
+                                 if t == word.lower()])
                     if results.get(word) is None:
                         results[word] = times
                     else:
