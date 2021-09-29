@@ -34,5 +34,5 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
         if pagination is not None:
             count_words(subreddit, word_list, pagination, results, count)
         else:
-            for a in sorted(resulta):
-                print(a + ":" + result[a])
+            for key, value in results.items():
+                print("{}: {}".format(key, value))
