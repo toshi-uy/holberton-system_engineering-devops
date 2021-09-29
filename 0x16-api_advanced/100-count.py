@@ -32,11 +32,12 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
         for data in hot:
             title = data.get('data').get('title')
             for word in word_list:
+                word = word.lower()
                 if word in title.split():
                     times = len([t for t in title.split()
-                                 if t == word.lower()])
-                    if results.get(word.lower()) is None:
-                        results[word.lower()] = times
+                                 if t.lower() == word])
+                    if results.get(word) is None:
+                        results[word] = times
                     else:
                         results[word.lower()] += times
         pagination = response.get('data').get('after')
