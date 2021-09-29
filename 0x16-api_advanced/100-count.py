@@ -17,7 +17,7 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
     url = 'https://www.reddit.com/r/' + subreddit +\
           '/hot.json?after={}'.format(pagination)
     req_hot = requests.get(url, headers=headers, 
-                           allow_redirects=False, count=count, limit=100)
+                           allow_redirects=False, count=count)
     if req_hot.status_code != 200:
         return
     else:
