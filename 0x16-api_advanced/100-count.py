@@ -14,9 +14,14 @@ def count_words(subreddit, word_list, pagination="", results={}, count=0):
     articles, and prints a sorted count of given keywords
     """
     headers = {"User-Agent": "Mozilla/5.0"}
+    params = {
+        'count': count,
+        'limt': 100,
+        'after': pagination
+    }
     url = 'https://www.reddit.com/r/' + subreddit +\
-          '/hot.json?after={}'.format(pagination)
-    req_hot = requests.get(url, headers=headers, count=count, limit=100,
+          '/hot.json'
+    req_hot = requests.get(url, headers=headers, params=params,
                            allow_redirects=False)
     if req_hot.status_code != 200:
         return
