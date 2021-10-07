@@ -1,0 +1,18 @@
+server  {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+        server_name _;
+
+        location /hbnb_static/ {
+                alias /data/web_static/current/;
+                index index.html index.html;
+        }
+        location /airbnb-onepage/ {
+                proxy_pass http://127.0.0.1:5000/airbn$
+        }
+        location ~ ^/number_odd_or_even/(\d)+ {
+                proxy_pass http://127.0.0.1:5001/numbe$
+        }
+}
