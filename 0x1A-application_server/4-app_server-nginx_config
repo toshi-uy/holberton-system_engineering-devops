@@ -9,10 +9,16 @@ server  {
                 alias /data/web_static/current/;
                 index index.html index.html;
         }
+
         location /airbnb-onepage/ {
                 proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
         }
+
         location ~ ^/airbnb-dynamic/number_odd_or_even/(.*)$ {
                 proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        location ~ ^/api/(.*)$ {
+                proxy_pass http://127.0.0.1:5002/api/$1;
         }
 }
